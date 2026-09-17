@@ -1,4 +1,17 @@
 # netbeans-project
+Open GitHub repository.
+
+Click Code → Download ZIP.
+
+Extract it.
+
+In NetBeans choose File → Open Project.
+
+Select the extracted project folder.
+
+
+
+# Questions
 
 
 1. Connection con = student_mgmt.getConnection();
