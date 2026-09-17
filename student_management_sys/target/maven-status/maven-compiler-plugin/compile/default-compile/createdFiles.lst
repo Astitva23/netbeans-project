@@ -1,0 +1,6 @@
+com\mycompany\student_management_sys\AddStudentForm.class
+com\mycompany\student_management_sys\find_student.class
+com\mycompany\student_management_sys\edit_student.class
+com\mycompany\student_management_sys\student_mgmt.class
+com\mycompany\student_management_sys\delete_student.class
+com\mycompany\student_management_sys\gui_main.class
