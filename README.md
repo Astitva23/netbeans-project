@@ -175,3 +175,32 @@ dispose();
 
 It closes the current JFrame window and releases its window resources.
 
+--------------
+# SQL db\
+
+CREATE DATABASE IF NOT EXISTS students;
+
+USE students;
+
+CREATE TABLE IF NOT EXISTS students (
+    roll_no INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    class INT NOT NULL,
+    section VARCHAR(10),
+    gender VARCHAR(20),
+    dob DATE,
+    phone VARCHAR(15)
+);
+
+INSERT INTO students
+    (roll_no, name, class, section, gender, dob, phone)
+VALUES
+    (101, 'Aarav Sharma', 12, 'A', 'Male', '2008-04-15', '9876543210'),
+    (102, 'Ananya Verma', 12, 'B', 'Female', '2008-07-22', '9876543211'),
+    (103, 'Rohan Mehta', 12, 'A', 'Male', '2008-02-10', '9876543212'),
+    (104, 'Priya Singh', 12, 'C', 'Female', '2008-11-03', '9876543213'),
+    (105, 'Kabir Khan', 12, 'B', 'Male', '2008-06-18', '9876543214'),
+    (106, 'Ishita Gupta', 12, 'A', 'Female', '2008-09-27', '9876543215'),
+    (107, 'Aditya Joshi', 12, 'C', 'Male', '2008-01-30', '9876543216'),
+    (108, 'Meera Patel', 12, 'B', 'Female', '2008-12-12', '9876543217');
+
