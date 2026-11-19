@@ -9,7 +9,12 @@ In NetBeans choose File → Open Project.
 
 Select the extracted project folder.
 
+# Make these changes:
 
+- Create edit student GUI
+- Create edit student code
+- Change the code for jbutton1
+- Change the code for jbutton4
 
 # Questions
 
