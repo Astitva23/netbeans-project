@@ -14,7 +14,11 @@ Select the extracted project folder.
 - Create edit student GUI
 - Create edit student code
 - Add refresh button
-
+```
+private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
+    loadStudentRecords();
+}
+```
 # Questions
 
 
