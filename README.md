@@ -13,8 +13,7 @@ Select the extracted project folder.
 
 - Create edit student GUI
 - Create edit student code
-- Change the code for jbutton1
-- Change the code for jbutton4
+- Add refresh button
 
 # Questions
 
