@@ -19,6 +19,54 @@ private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
     loadStudentRecords();
 }
 ```
+- Edit student method( main inside mgmt), add this after delete student
+```
+public static boolean updateStudent(int rollNo, String name, int studentClass,
+        String section, String gender, String dob, String phone) throws SQLException {
+
+    String sql = "UPDATE students SET name = ?, class = ?, section = ?, "
+               + "gender = ?, dob = ?, phone = ? WHERE roll_no = ?";
+
+    try (Connection con = getConnection();
+         PreparedStatement pst = con.prepareStatement(sql)) {
+
+        pst.setString(1, name);
+        pst.setInt(2, studentClass);
+        pst.setString(3, section);
+        pst.setString(4, gender);
+        pst.setString(5, dob);
+        pst.setString(6, phone);
+        pst.setInt(7, rollNo);
+
+        return pst.executeUpdate() > 0;
+    }
+}
+```
+
+- Change the Edit button. In gui_main.java, replace the whole jButton4ActionPerformed method with this:
+```
+  private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
+    int row = tblStudents.getSelectedRow();
+
+    if (row == -1) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Please select a student from the table first.");
+        return;
+    }
+
+    int rollNo = Integer.parseInt(String.valueOf(studentModel.getValueAt(row, 0)));
+    String name = String.valueOf(studentModel.getValueAt(row, 1));
+    int studentClass = Integer.parseInt(String.valueOf(studentModel.getValueAt(row, 2)));
+    String section = String.valueOf(studentModel.getValueAt(row, 3));
+    String gender = String.valueOf(studentModel.getValueAt(row, 4));
+    String dob = String.valueOf(studentModel.getValueAt(row, 5));
+    String phone = String.valueOf(studentModel.getValueAt(row, 6));
+
+    edit_student form = new edit_student(rollNo, name, studentClass, section, gender, dob, phone);
+    form.setLocationRelativeTo(this);
+    form.setVisible(true);
+}
+```
+
 # Questions
 
 
